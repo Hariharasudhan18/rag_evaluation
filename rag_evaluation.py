@@ -24,7 +24,7 @@ def mean_reciprocal_rank(retrieved_docs, ground_truth):
 
 def evaluate_retrieval(query, retrieved_docs, ground_truth):
     # Load the pre-trained sentence transformer model for embedding computation
-    model = SentenceTransformer('all-MiniLM-L6-v2')
+    model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2',cache_folder="C:\\Users\\hari1\\.cache\\huggingface")
     
     # Encode the query and ground truth into vector embeddings
     query_embedding = model.encode(query, convert_to_tensor=True)
